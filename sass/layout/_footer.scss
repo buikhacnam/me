@@ -1,0 +1,29 @@
+.footer {
+    background-color: $color-grey-dark-3;
+    padding: 7rem 0;
+    font-size: 1.6rem;
+    color: $color-grey-light-1;
+
+    &__item {
+        display: block;
+        transition: all .2s;  
+    }
+
+    &__link {
+        &:link,
+        &:visited {
+            color:$color-grey-light-1;
+            background-color: $color-grey-dark-3;
+            text-decoration: none;
+            display: block;
+            transition: all .2s;
+        }
+
+        &:hover,
+        &:active {
+            color: $color-primary;
+            box-shadow: 0 1rem 2rem rgba($color-black, .4);
+            transform: rotate(5deg) scale(1.3);
+    }
+}
+}

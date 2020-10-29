@@ -1,0 +1,187 @@
+.card {
+    perspective: 150rem;
+    -moz-perspective: 150rem;
+    position: relative;
+    height: 45rem;
+    width: 100%;
+    padding: 2rem;
+    
+
+    &__side {
+        height: 45rem;
+        transition: all .8s;
+        position: absolute;
+        top: 0;
+        left: 0;
+        backface-visibility: hidden;
+        width: 100%;
+        border-radius: 3px;
+        overflow: hidden;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+       
+        
+        &--front {
+            background-color: $color-white;
+        }
+
+        &--back {
+            background-color: green;
+            transform: rotateY(180deg);
+
+            &-1{
+                background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark);
+            }
+            &-2{
+                background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+            }
+            &-3{
+                background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark);
+            }
+            &-4{
+                background-image: linear-gradient(to right bottom, $color-fourth-light, $color-fourth-dark);
+            }
+            &-5{
+                background-image: linear-gradient(to right bottom, $color-fifth-light, $color-fifth-dark);
+            }
+            &-6{
+                background-image: linear-gradient(to right bottom, $color-sixth-light, $color-sixth-dark);
+            }
+        }
+
+    }
+
+    &:hover &__side--front{
+        transform: rotateY(-180deg);
+    }
+
+    &:hover &__side--back{
+        transform: rotateY(0deg);
+    }
+
+
+    &__picture {
+        background-size: cover;
+        height: 23rem;
+        background-blend-mode: screen;
+        -webkit-clip-path: polygon(0 0 ,100% 0, 100% 85%, 0 100%);
+        clip-path: polygon(0 0 ,100% 0, 100% 85%, 0 100%);
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+       
+        &--1 {
+            background-image: linear-gradient(to right bottom, $color-secondary-light, $color-secondary-dark), 
+            url(https://images.pexels.com/photos/372098/pexels-photo-372098.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+        }
+
+        &--2 {
+            background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark), 
+            url(https://images.pexels.com/photos/4144923/pexels-photo-4144923.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+        }
+
+        &--3 {
+            background-image: linear-gradient(to right bottom, $color-tertiary-light, $color-tertiary-dark), 
+            url(https://images.pexels.com/photos/1174932/pexels-photo-1174932.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+        }
+
+        &--4 {
+            background-image: linear-gradient(to right bottom, $color-fourth-light, $color-fourth-dark), 
+            url(https://images.pexels.com/photos/1174597/pexels-photo-1174597.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+        }
+
+        &--5 {
+            background-image: linear-gradient(to right bottom, $color-fifth-light, $color-fifth-dark), 
+            url(https://images.pexels.com/photos/17679/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+        }
+
+        &--6 {
+            background-image: linear-gradient(to right bottom, $color-sixth-light, $color-sixth-dark), 
+            url(https://images.pexels.com/photos/1440387/pexels-photo-1440387.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+        }
+    }
+
+    &__heading {
+        font-size: 2.8rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        text-align: right;
+        color: $color-white;
+        position: absolute;
+        top: 12rem;
+        right: 2rem;
+        width: 60%;
+    }
+
+    &__heading-span {
+        -webkit-box-decoration-break: clone;
+        box-decoration-break: clone;
+        padding: 1rem 1.5rem;
+        &--1 {
+            background-image: linear-gradient(to right bottom,
+             rgba($color-secondary-light, .9), 
+             rgba($color-secondary-dark, .9));
+        }
+
+        &--2 {
+            background-image: linear-gradient(to right bottom,
+             rgba($color-primary-light, .9), 
+             rgba($color-primary-dark, .9));
+        }
+
+        &--3 {
+            background-image: linear-gradient(to right bottom,
+             rgba($color-tertiary-light, .9), 
+             rgba($color-tertiary-dark, .9));
+        }
+
+        &--4 {
+            background-image: linear-gradient(to right bottom,
+             rgba($color-fourth-light, .9), 
+             rgba($color-fourth-dark, .9));
+        }
+
+        &--5 {
+            background-image: linear-gradient(to right bottom,
+             rgba($color-fifth-light, .9), 
+             rgba($color-fifth-dark, .9));
+        }
+
+        &--6 {
+            background-image: linear-gradient(to right bottom,
+             rgba($color-sixth-light, .9), 
+             rgba($color-sixth-dark, .9));
+        }
+    }
+
+    &__details {
+        padding: 3rem;
+        font-size: 1.5rem;
+    }
+
+    &__cta {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        text-align: center;
+    }
+
+    &__price-box {
+        text-align: center;
+        color: $color-white;
+        margin-bottom: 4rem;
+        ul {
+            list-style: none;
+            margin: 0 auto;
+
+            li {
+                text-align: center;
+                font-size: 3rem;
+                font-weight: 500;
+                padding: 1rem;
+            }
+        }
+    }
+   
+
+}
