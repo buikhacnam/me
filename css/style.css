@@ -488,9 +488,8 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 2500;
-  opacity: 0;
-  width: 0; }
+  z-index: -10;
+  opacity: 0; }
 
 .navigation__list {
   position: absolute;
@@ -529,7 +528,8 @@ body {
 
 .navigation__checkbox:checked ~ .navigation__nav {
   opacity: 1;
-  width: 100%; }
+  width: 100%;
+  z-index: 2500; }
 
 .navigation__icon {
   position: relative;

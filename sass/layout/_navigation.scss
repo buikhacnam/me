@@ -35,9 +35,9 @@
         position: fixed;
         top: 0;
         left: 0;
-        z-index: 2500;
+        z-index: -10;
         opacity: 0;
-        width: 0;
+        
         
     }
 
@@ -93,6 +93,7 @@
     &__checkbox:checked ~ &__nav {
         opacity: 1;
         width: 100%;
+        z-index: 2500;
     }
 
     &__icon {
