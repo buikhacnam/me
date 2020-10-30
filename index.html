@@ -15,6 +15,27 @@
         <title>Bui Nam | Front End Developer</title>
     </head>
     <body>
+
+        <div class="navigation">
+            <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+
+            <label for="navi-toggle" class="navigation__button">
+                <span class="navigation__icon"></span>
+            </label>
+            
+            <div class="navigation__background"></div>
+
+            <nav class="navigation__nav">
+                <ul class="navigation__list">
+                    <li class="navigation__item"><a href="#" class="navigation__link">Bui Nam</a></li>
+                    <li class="navigation__item"><a href="#about" class="navigation__link">About</a></li>
+                    <li class="navigation__item"><a href="#certifications" class="navigation__link">Certifications</a></li>
+                    <li class="navigation__item"><a href="#section-projects" class="navigation__link">Projects</a></li>
+                    <li class="navigation__item"><a href="#contact" class="navigation__link">Contact</a></li>
+                    <li class="navigation__item"><a target="_blank" href="img/Bui Nam - Resume.pdf" class="navigation__link">Download Resume</a></li>
+                </ul>
+            </nav>
+        </div>
         
         <header class="header">
             <div class="header__logo-box">
@@ -31,7 +52,7 @@
             </div>
         </header>
 
-        <section class="section-about">
+        <section class="section-about" id="about">
             <div class="u-center-text u-margin-bottom-medium">
                 <h2 class="heading-secondary">
                     About Me
@@ -61,7 +82,7 @@
             
         </section>
 
-        <section class="section-features">
+        <section class="section-features" id="certifications">
               
             <div class="features-container">
                 
@@ -272,7 +293,7 @@
                                 
                             </h4>
                             <div class="card__details">
-                                <p>The potfolio represents my skills and creativity as I show some of my great projects and paint an overview picture of myself. All those cool featuresuses and animations in the project are done by using only Sass / CSS.</p>
+                                <p>The potfolio represents my skills and creativity as I show some of my great projects and paint an overview picture of myself. The project is made by using heavily Sass / CSS and a little of Javascript.</p>
                             </div>
 
                         </div>
@@ -282,6 +303,7 @@
                                 <div class="card__price-box">
                                     <ul>
                                         <li>Sass / CSS</li>  
+                                        <li>JavaScript</li> 
                                     </ul>
                                     
                                     
@@ -329,7 +351,7 @@
             </div>
         </section>
 
-        <footer class="footer">
+        <footer class="footer" id="contact">
             <div class="footer-container">
                 <div class="footer-container__logo-box">
                     <img src="img/footer-icon-2.png" alt="logo">
@@ -468,7 +490,7 @@
             </div>
         </div>
 
-
+        <script type="text/javascript" src='javascript.js'></script>
     
     </body>
 </html>

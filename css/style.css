@@ -355,7 +355,7 @@ body {
 .header {
   height: 95vh;
   width: 100%;
-  background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.4), rgba(86, 67, 250, 0.2)), url(../img/moutain.gif);
+  background-image: linear-gradient(to right bottom, rgba(41, 152, 255, 0.4), rgba(86, 67, 250, 0.4)), url(../img/moutain.gif);
   background-size: cover;
   background-position: center;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
@@ -363,10 +363,10 @@ body {
   position: relative; }
   .header__logo-box {
     position: absolute;
-    top: 0.7rem;
+    top: 3rem;
     left: 0rem; }
   .header__logo {
-    height: 4rem; }
+    height: 4.5rem; }
   .header__text-box {
     position: absolute;
     top: 40%;
@@ -455,6 +455,98 @@ body {
   .popup__content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); } }
+
+.navigation__checkbox {
+  display: none; }
+
+.navigation__button {
+  background-color: #fff;
+  height: 5rem;
+  width: 5rem;
+  position: fixed;
+  top: 3rem;
+  right: 3rem;
+  border-radius: 50%;
+  z-index: 3000;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+  text-align: center;
+  cursor: pointer; }
+
+.navigation__background {
+  z-index: 2000;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  position: fixed;
+  top: 3.5rem;
+  right: 3.5rem;
+  background-image: radial-gradient(#5643fa, #0652DD);
+  transition: transform .3s; }
+
+.navigation__nav {
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2500;
+  opacity: 0;
+  width: 0; }
+
+.navigation__list {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center;
+  width: 100%; }
+
+.navigation__item {
+  margin: 1rem; }
+
+.navigation__link:link, .navigation__link:visited {
+  display: inline-block;
+  font-size: 3rem;
+  font-weight: 300;
+  padding: 1rem 2rem;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #fff 50%);
+  background-size: 250%;
+  transition: all .3s; }
+
+.navigation__link:hover {
+  background-position: 100%;
+  color: #0652DD;
+  transform: translateX(1rem); }
+
+.navigation__link:active__checkbox:checked ~ .navigation__link:active__background {
+  transform: scale(80); }
+
+.navigation__checkbox:checked ~ .navigation__background {
+  transform: scale(100); }
+
+.navigation__checkbox:checked ~ .navigation__nav {
+  opacity: 1;
+  width: 100%; }
+
+.navigation__icon {
+  position: relative;
+  margin-top: 2.4rem; }
+  .navigation__icon, .navigation__icon::before, .navigation__icon::after {
+    width: 2rem;
+    height: 2px;
+    background-color: #333;
+    display: inline-block; }
+  .navigation__icon::before, .navigation__icon::after {
+    content: "";
+    position: absolute;
+    left: 0; }
+  .navigation__icon::before {
+    top: -.8rem; }
+  .navigation__icon::after {
+    top: .8rem; }
 
 .section-about {
   background-color: #f7f7f7;
