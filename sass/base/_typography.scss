@@ -69,7 +69,13 @@ body {
     }
 }
 
-
+.paragraph-1{
+    color: black;
+    font-size: $default-font-size;
+    &:not(:last-child) {
+        margin-bottom: 3rem;
+    }
+}
 
 
 
