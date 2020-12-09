@@ -4,8 +4,11 @@
   "description": "Bui Nam's potfolio",
   "main": "index.js",
   "scripts": {
-    "compile:sass" : "node-sass sass/main.scss css/style.css -w"
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
   },
   "author": "Bui Nam",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  }
 }
